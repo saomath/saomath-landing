@@ -60,7 +60,7 @@
         .bg-blur-2 {
             width: 400px;
             height: 400px;
-            background: #ec4899;
+            background: #8b5cf6;
             bottom: -100px;
             right: -100px;
             animation: blob2 10s ease-in-out infinite;
@@ -379,61 +379,61 @@
 
         @media (max-width: 640px) {
             body {
-                padding: 40px 20px;
-                padding-top: calc(40px + env(safe-area-inset-top));
-                padding-bottom: calc(60px + env(safe-area-inset-bottom));
+                padding: 60px 24px;
+                padding-top: calc(80px + env(safe-area-inset-top));
+                padding-bottom: calc(100px + env(safe-area-inset-bottom));
             }
 
             .title {
-                font-size: 2rem;
-                margin-bottom: 30px;
+                font-size: 1.8rem;
+                margin-bottom: 36px;
             }
 
             .cards {
                 flex-direction: column;
                 align-items: center;
-                gap: 16px;
+                gap: 20px;
             }
 
             .card {
                 width: 100%;
-                max-width: 300px;
+                max-width: 280px;
             }
 
             .card-inner {
-                padding: 24px 20px;
+                padding: 28px 24px;
             }
 
             .card-icon {
-                width: 50px;
-                height: 50px;
-                margin-bottom: 12px;
+                width: 64px;
+                height: 64px;
+                margin-bottom: 16px;
             }
 
             .card-icon svg {
-                width: 26px;
-                height: 26px;
+                width: 32px;
+                height: 32px;
             }
 
             .card-title {
-                font-size: 1.1rem;
-                margin-bottom: 14px;
+                font-size: 1.15rem;
+                margin-bottom: 16px;
             }
 
             .logo {
-                width: 120px;
-                margin-bottom: 12px;
+                width: 110px;
+                margin-bottom: 8px;
             }
 
             .footer {
                 position: relative;
                 bottom: auto;
-                margin-top: 30px;
+                margin-top: 40px;
             }
 
             .bg-blur-1, .bg-blur-2, .bg-blur-3 {
-                filter: blur(60px);
-                opacity: 0.4;
+                filter: blur(100px);
+                opacity: 0.3;
             }
         }
     </style>
