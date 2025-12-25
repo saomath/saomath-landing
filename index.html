@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>사오수학 | SAO Math</title>
     <meta name="description" content="사오수학 - 오프라인 캠퍼스와 온라인 클래스를 선택하세요">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -19,14 +19,23 @@
         body {
             font-family: 'Noto Sans KR', sans-serif;
             min-height: 100vh;
+            min-height: -webkit-fill-available;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             padding: 20px;
+            padding-top: calc(20px + env(safe-area-inset-top));
+            padding-bottom: calc(20px + env(safe-area-inset-bottom));
+            padding-left: calc(20px + env(safe-area-inset-left));
+            padding-right: calc(20px + env(safe-area-inset-right));
             overflow: hidden;
             position: relative;
+        }
+
+        html {
+            height: -webkit-fill-available;
         }
 
         /* 배경 블러 오브 */
@@ -369,23 +378,57 @@
         }
 
         @media (max-width: 640px) {
+            body {
+                padding: 40px 20px;
+                padding-top: calc(40px + env(safe-area-inset-top));
+                padding-bottom: calc(60px + env(safe-area-inset-bottom));
+            }
+
             .title {
                 font-size: 2rem;
+                margin-bottom: 30px;
             }
 
             .cards {
                 flex-direction: column;
                 align-items: center;
-                gap: 20px;
+                gap: 16px;
             }
 
             .card {
                 width: 100%;
-                max-width: 320px;
+                max-width: 300px;
+            }
+
+            .card-inner {
+                padding: 24px 20px;
+            }
+
+            .card-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 12px;
+            }
+
+            .card-icon svg {
+                width: 26px;
+                height: 26px;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+                margin-bottom: 14px;
             }
 
             .logo {
-                width: 130px;
+                width: 120px;
+                margin-bottom: 12px;
+            }
+
+            .footer {
+                position: relative;
+                bottom: auto;
+                margin-top: 30px;
             }
 
             .bg-blur-1, .bg-blur-2, .bg-blur-3 {
